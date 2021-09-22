@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Biblioteca</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuestes modificadas -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Llamada CSS -->
+    
+    <link rel="stylesheet" href="css/creative.css">
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Biblioteca de videojuegos!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    
+                    <li>
+                        <a class="page-scroll" href="index.html">Pagina Principal</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+ 
+    <header class="header2" >
+
+        <div class="header-content">
+            <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <canvas id="canvas" width="500" height="500"></canvas>
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var color = '#59DF7A';
+ctx.strokeStyle = 'white';
+ctx.lineWidth = 17;
+ctx.lineCap = 'round';
+ctx.shadowBlur = 10;
+
+
+
+
+function degToRoad(degree)
+{
+    var factor = Math.PI / 180;
+    return factor * degree;
+}
+
+function renderTime()
+{
+  var now = new Date();
+  var today = now.toDateString();
+  var time = now.toLocaleTimeString();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var milliseconds = now.getMilliseconds();
+  var newSconds = seconds + (milliseconds / 1000);
+  
+  //background
+  
+  
+
+  ctx.fillStyle = '#3C3C3C';
+  ctx.fillRect(0, 0, 470, 470);
+  //rgba(138,221,45,0)
+  //hours
+  ctx.beginPath();
+  ctx.arc(250,250,200,degToRoad(270),degToRoad((hours*15)-90));
+  ctx.stroke();
+  
+  //minutes
+  ctx.beginPath();
+  ctx.arc(250,250,170,degToRoad(270),degToRoad((minutes*6)-90));
+  ctx.stroke();
+  
+  //seconds
+    
+  ctx.beginPath();
+  ctx.arc(250,250,140,degToRoad(270),degToRoad((newSconds*6)-90));
+  ctx.stroke();
+  
+  //date
+  ctx.fillStyle = color;
+  ctx.font = '24px Arial';
+  ctx.fillText(today,170 ,250);
+  
+  //time
+  ctx.fillStyle = color;
+  ctx.font = '15px Arial';
+  ctx.fillText(time,170 ,280);
+}
+
+setInterval(renderTime,40);
+</script>
+<script src="https://static.jsbin.com/js/render/edit.js?4.1.7"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1656750-34', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+        </div>
+    </header>
+
+   
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/gow1.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/gow1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                    God of War: Ghost of Sparta es un videojuego de acción-aventura en tercera persona desarrollado por Ready at Dawn Studios y SCE Santa Monica Studio. Publicado por Sony Computer Entertainment, primero fue lanzado para la consola portátil PlayStation Portable el 2 de noviembre de 2010. 
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/daxter.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/daxter.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                    Jak and Daxter: The Lost Frontier es un videojuego desarrollado por High Impact Games y publicado por Sony Computer Entertaiment que salió el 3 de noviembre de 2009 para plataformas PlayStation Portable y PlayStation 2. Es el sexto juego de la saga y según estimaciones, es el quinto juego de Jak and Daxter.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/mot.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/mot.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                    MX vs. ATV Untamed es un juego de carreras offroad desarrollado por Rainbow Studios, Tantalus Media, Incinerator Studios y publicado por THQ para Nintendo DS, PlayStation 2, PlayStation 3, PlayStation Portable, Xbox 360 y Wii. Es parte de su serie MX vs. ATV. Es la secuela del juego 2005 MX vs. ATV Unleashed.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/china.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/china.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                    Grand Theft Auto: Chinatown Wars, o simplemente GTA: Chinatown Wars, es un videojuego para Nintendo DS, PSP, iPhone, iPod touch, iPad y Android, desarrollado por Rockstar Leeds junto con Rockstar North. Es el décimo juego de la saga Grand Theft Auto.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/crash.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/crash.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                    Crash Tag Team Racing es un videojuego de plataformas y de carrera a la vez para las videoconsolas PlayStation 2, PSP, GameCube y Xbox protagonizado por el marsupial evolucionado Crash Bandicoot.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/susano.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/susano.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PSP
+                                </div>
+                                <div class="project-name">
+                                   Naruto Shippuden: Ultimate Ninja Impact comienza con un Naruto casi adulto, convertido ya en ermitaño, con un gran dominio sobre el Kyubi que habita en su interior y con la organización Akatsuki on fire intentando reunir a todos los Biju bajo su dominio.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            
+        </div>
+    </aside>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Listo para jugar!</h2>
+                    <hr class="primary">
+                    <p>Cualquier duda o sugerencia, asi como reporte de fallos de la pagina, por favor contactarnos:</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>272-167-89-60</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="Pagina3.html">lechuga.lflr@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
